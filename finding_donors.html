@@ -12956,7 +12956,7 @@ $$ F_{\beta} = (1 + \beta^2) \cdot \frac{precision \cdot recall}{\left( \beta^2 
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong> <strong>The three supervised models that are appropriate for this problem are : -- Gaussian Naive Bayes -- Decision Trees -- Ensemble Methods(RandomForest)</strong><br><br>
 <br>
-<strong>1.GaussianNB</strong><br>
+<strong>1.GaussianNB</strong>(Naive Bayes can be applied to our data as it can be seen that the training set is small, high bias/low variance.)<br>
 <br>
 <strong>application</strong><br>
 Some of real world applications are as given below<br>
@@ -12974,7 +12974,7 @@ Some of real world applications are as given below<br>
 <br>-&gt;The first disadvantage is that the Naive Bayes classifier makes a very strong assumption on the shape of your data distribution, i.e. any two features are independent given the output class. Due to this, the result can be (potentially) very bad - hence, a “naive” classifier. This is not as terrible as people generally think, because the NB classifier can be optimal even if the assumption is violated, and its results can be good even in the case of sub-optimality.</p>
 <p><br>-&gt;Another problem happens due to data scarcity. For any possible value of a feature, you need to estimate a likelihood value by a frequentist approach. This can result in probabilities going towards 0 or 1, which in turn leads to numerical instabilities and worse results. In this case, you need to smooth in some way your probabilities (e.g. as in sklearn [1]), or to impose some prior on your data, however you may argue that the resulting classifier is not naive anymore.</p>
 <p><br>-&gt;A third problem arises for continuous features. It is common to use a binning procedure to make them discrete, but if you are not careful you can throw away a lot of information. Another possibility is to use Gaussian distributions for the likelihoods.</p>
-<p><br><strong>2.Ensemble learning ( RandomForestClassifier)</strong>
+<p><br><strong>2.Ensemble learning ( RandomForestClassifier)</strong>(RandomForest can be applied to our data as the data can be efficietly split based on attribute selection and the resutlt is binary (either &gt;50k or &lt;=50k) hence applying ensemble learning on the subsets of data via random forest can help gein high accuracy with easy visualization while at the same time reducing chances of over fitting.)
 <br><strong>applications</strong>
 <br>Random Forest algorithm is widely used in finance as well as in Machine Fault diagnosis.
 <strong>Advantages</strong>
@@ -12987,7 +12987,7 @@ Some of real world applications are as given below<br>
 <br>-&gt;As the dataset grows, large number of trees are required, hence complexity of the model increases.</p>
 <p><br>-&gt;For data including categorical variables with different number of levels, random forests are biased in favor of those attributes with more levels. Therefore, the variable importance scores from random forest are not reliable for this type of data.</p>
 <p><br>-&gt;RF performs poorly when the number of dimensions is tooo high as compared to the number of training examples. Also, it is not the best suited algorihm when dataset contain categorical features at different levels as it will overfit in this case.</p>
-<p><br><br><strong>3.DecisionTreeClassifier</strong>
+<p><br><br><strong>3.DecisionTreeClassifier</strong>(DecisionTreeClassifier can be applied to our data as the data can be efficietly split based on attribute selection and the resutlt is binary (either &gt;50k or &lt;=50k) hence can gain high accuracy with easy visualization.)
 <br><strong>applications</strong>
 <br>-&gt;Biomedical Engineering: Use of decision trees for identifying features to be used in implantable devices.
 <br>-&gt;Control Systems: Automatic induction of decision trees was recently used for control of nonlinear dynamical systems.
